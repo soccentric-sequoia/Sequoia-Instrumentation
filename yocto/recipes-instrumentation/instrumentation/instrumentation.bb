@@ -37,7 +37,7 @@ SRC_URI = "git://github.com/soccentric-sequoia/Sequoia-Instrumentation.git;proto
 # this recipe was first written -- confirmed by an actual do_fetch
 # failure (exit code 128) the first time this SRC_URI was ever
 # actually fetched anywhere in the fleet.
-INSTR_SRCREV ?= "0119a4a98e5425e36f7fa29a40add3d789bf6581"
+INSTR_SRCREV ?= "9289d1a"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('SEQUOIA_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
