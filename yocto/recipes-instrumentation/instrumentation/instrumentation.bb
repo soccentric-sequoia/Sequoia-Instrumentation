@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/soccentric-sequoia/Sequoia-Instrumentation.git;proto
 # -- a release build must never silently float.
 # Held in its own variable: referencing SRCREV from inside SRCREV's own
 # expansion is self-referential and bitbake would recurse on it.
-INSTR_SRCREV ?= "4a16b13570131353ad7668f5b40b6c9b6bd9da62"
+INSTR_SRCREV ?= "602935a5b12d17ec6e9611651968e92e1e62a008"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('SEQUOIA_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
